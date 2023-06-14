@@ -28,7 +28,7 @@ export const categories = [
     description: 'This property is on an island!'
   },
   {
-    label: 'Attires',
+    label: 'Attire',
     icon: GiIsland,
     description: 'This property is on an island!'
   },
