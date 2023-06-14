@@ -23,79 +23,39 @@ import Container from '../Container';
 
 export const categories = [
   {
-    label: 'Beach',
-    icon: TbBeach,
-    description: 'This property is close to the beach!',
-  },
-  {
-    label: 'Windmills',
-    icon: GiWindmill,
-    description: 'This property is has windmills!',
-  },
-  {
-    label: 'Modern',
-    icon: MdOutlineVilla,
-    description: 'This property is modern!'
-  },
-  {
-    label: 'Countryside',
-    icon: TbMountain,
-    description: 'This property is in the countryside!'
-  },
-  {
-    label: 'Pools',
-    icon: TbPool,
-    description: 'This is property has a beautiful pool!'
-  },
-  {
-    label: 'Islands',
+    label: 'Attires',
     icon: GiIsland,
     description: 'This property is on an island!'
   },
   {
-    label: 'Lake',
-    icon: GiBoatFishing,
-    description: 'This property is near a lake!'
+    label: 'Bikes and Scooters',
+    icon: TbBeach,
+    description: 'Books and Textbooks',
   },
   {
-    label: 'Skiing',
-    icon: FaSkiing,
-    description: 'This property has skiing activies!'
+    label: 'Books and Textbooks',
+    icon: GiWindmill,
+    description: 'This property is has windmills!',
   },
   {
-    label: 'Castles',
-    icon: GiCastle,
-    description: 'This property is an ancient castle!'
+    label: 'Cameras / Video equipment',
+    icon: MdOutlineVilla,
+    description: 'This property is modern!'
   },
   {
-    label: 'Caves',
-    icon: GiCaveEntrance,
-    description: 'This property is in a spooky cave!'
+    label: 'Dorm Appliances',
+    icon: TbMountain,
+    description: 'This property is in the countryside!'
   },
   {
-    label: 'Camping',
-    icon: GiForestCamp,
-    description: 'This property offers camping activities!'
+    label: 'Gaming Consoles',
+    icon: TbPool,
+    description: 'This is property has a beautiful pool!'
   },
   {
-    label: 'Arctic',
-    icon: BsSnow,
-    description: 'This property is in arctic environment!'
-  },
-  {
-    label: 'Desert',
-    icon: GiCactus,
-    description: 'This property is in the desert!'
-  },
-  {
-    label: 'Barns',
-    icon: GiBarn,
-    description: 'This property is in a barn!'
-  },
-  {
-    label: 'Lux',
-    icon: IoDiamond,
-    description: 'This property is brand new and luxurious!'
+    label: 'Storage Space',
+    icon: GiIsland,
+    description: 'This property is on an island!'
   }
 ]
 
