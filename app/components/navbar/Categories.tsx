@@ -23,6 +23,11 @@ import Container from '../Container';
 
 export const categories = [
   {
+    label: 'Appliances',
+    icon: GiIsland,
+    description: 'This property is on an island!'
+  },
+  {
     label: 'Attires',
     icon: GiIsland,
     description: 'This property is on an island!'
@@ -43,17 +48,27 @@ export const categories = [
     description: 'This property is modern!'
   },
   {
-    label: 'Dorm Appliances',
+    label: 'Furniture',
     icon: TbMountain,
     description: 'This property is in the countryside!'
   },
   {
-    label: 'Gaming Consoles',
+    label: 'Gaming',
+    icon: TbPool,
+    description: 'This is property has a beautiful pool!'
+  },  
+  {
+    label: 'Event Space',
     icon: TbPool,
     description: 'This is property has a beautiful pool!'
   },
   {
     label: 'Storage Space',
+    icon: GiIsland,
+    description: 'This property is on an island!'
+  },
+  {
+    label: 'Other',
     icon: GiIsland,
     description: 'This property is on an island!'
   }
