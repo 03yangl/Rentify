@@ -18,13 +18,13 @@ const Search = () => {
   const  endDate = params?.get('endDate');
   const  guestCount = params?.get('guestCount');
 
-  const locationLabel = useMemo(() => {
+  /*const locationLabel = useMemo(() => {
     if (locationValue) {
       return getByValue(locationValue as string)?.label;
     }
 
-    return 'Anywhere';
-  }, [locationValue, getByValue]);
+    return 'Any Category';
+  }, [locationValue, getByValue]); */
 
   const durationLabel = useMemo(() => {
     if (startDate && endDate) {
@@ -39,16 +39,16 @@ const Search = () => {
       return `${diff} Days`;
     }
 
-    return 'Any Week'
+    return 'Any Time'
   }, [startDate, endDate]);
 
-  const guestLabel = useMemo(() => {
+  /*const guestLabel = useMemo(() => {
     if (guestCount) {
       return `${guestCount} Guests`;
     }
 
-    return 'Add Guests';
-  }, [guestCount]);
+    return 'Any';
+  }, [guestCount]); */
 
   return ( 
     <div
@@ -74,13 +74,13 @@ const Search = () => {
         "
       >
         <div 
-          className="
+          /*className="
             text-sm 
             font-semibold 
             px-6
-          "
+          "*/
         >
-          {locationLabel}
+          {/*locationLabel*/}
         </div>
         <div 
           className="
@@ -108,11 +108,11 @@ const Search = () => {
             gap-3
           "
         >
-          <div className="hidden sm:block">{guestLabel}</div>
+          <div className="hidden sm:block">{/*guestLabel*/}</div>
           <div 
             className="
               p-2 
-              bg-rose-500 
+              bg-emerald-400 
               rounded-full 
               text-white
             "
