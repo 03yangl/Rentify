@@ -50,10 +50,10 @@ const RentModal = () => {
   } = useForm<FieldValues>({
     defaultValues: {
       category: '',
-      //location: null,
-      //guestCount: 1,
-      //roomCount: 1,
-      //bathroomCount: 1,
+      location: 'Americas, United States',
+      guestCount: 1,
+      roomCount: 1,
+      bathroomCount: 1,
       imageSrc: '',
       price: 1,
       title: '',
@@ -61,11 +61,11 @@ const RentModal = () => {
     }
   });
 
-  //const location = watch('location');
+  const location = watch('location');
   const category = watch('category');
-  //const guestCount = watch('guestCount');
-  //const roomCount = watch('roomCount');
-  //const bathroomCount = watch('bathroomCount');
+  const guestCount = watch('guestCount');
+  const roomCount = watch('roomCount');
+  const bathroomCount = watch('bathroomCount');
   const imageSrc = watch('imageSrc');
 
   /*const Map = useMemo(() => dynamic(() => import('../Map'), { 
@@ -104,9 +104,9 @@ const RentModal = () => {
       setStep(STEPS.CATEGORY)
       rentModal.onClose();
     })
-    /*.catch(() => {
+    .catch(() => {
       toast.error('Something went wrong.');
-    })*/
+    })
     .finally(() => {
       setIsLoading(false);
     })
@@ -211,7 +211,7 @@ const RentModal = () => {
       <div className="flex flex-col gap-8">
         <Heading
           title="Add a photo of your place"
-          subtitle="Show guests what your place looks like!"
+          subtitle="Show renters what item place looks like!"
         />
         <ImageUpload
           onChange={(value) => setCustomValue('imageSrc', value)}
@@ -225,7 +225,7 @@ const RentModal = () => {
     bodyContent = (
       <div className="flex flex-col gap-8">
         <Heading
-          title="How would you describe your place?"
+          title="How would you describe your item?"
           subtitle="Short and sweet works best!"
         />
         <Input
