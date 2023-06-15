@@ -25,52 +25,52 @@ export const categories = [
   {
     label: 'Appliances',
     icon: GiIsland,
-    description: 'This property is on an island!'
+    description: 'Tools you only need once!'
   },
   {
     label: 'Attire',
     icon: GiIsland,
-    description: 'This property is on an island!'
+    description: 'Clothing for cheap!'
   },
   {
     label: 'Bikes and Scooters',
     icon: TbBeach,
-    description: 'Books and Textbooks',
+    description: 'Helping you get places!',
   },
   {
     label: 'Books and Textbooks',
     icon: GiWindmill,
-    description: 'This property is has windmills!',
+    description: 'Education for a fraction of the cost!',
   },
   {
     label: 'Cameras / Video equipment',
     icon: MdOutlineVilla,
-    description: 'This property is modern!'
+    description: 'Rolling...'
   },
   {
     label: 'Furniture',
     icon: TbMountain,
-    description: 'This property is in the countryside!'
+    description: 'Enhance your room!'
   },
   {
     label: 'Gaming',
     icon: TbPool,
-    description: 'This is property has a beautiful pool!'
+    description: 'Controllers for your next hangout.'
   },  
   {
     label: 'Event Space',
     icon: TbPool,
-    description: 'This is property has a beautiful pool!'
+    description: 'To hold ALL your guests!'
   },
   {
     label: 'Storage Space',
     icon: GiIsland,
-    description: 'This property is on an island!'
+    description: 'Last minute drop-offs.'
   },
   {
     label: 'Other',
     icon: GiIsland,
-    description: 'This property is on an island!'
+    description: '...'
   }
 ]
 

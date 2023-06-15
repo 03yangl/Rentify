@@ -22,7 +22,7 @@ Features:
 - Page loading state
 - Page empty state
 - Booking / Reservation system
-- Guest reservation cancellation
+- Renter reservation cancellation
 - Owner reservation cancellation
 - Creation and deletion of properties
 - Pricing calculation

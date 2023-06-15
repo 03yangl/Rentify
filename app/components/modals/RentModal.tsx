@@ -24,11 +24,11 @@ import Heading from '../Heading';
 
 enum STEPS {
   CATEGORY = 0,
-  LOCATION = 1,
-  INFO = 2,
-  IMAGES = 3,
-  DESCRIPTION = 4,
-  PRICE = 5,
+  //LOCATION = 1,
+  //INFO = 2,
+  IMAGES = 1,
+  DESCRIPTION = 2,
+  PRICE = 3,
 }
 
 const RentModal = () => {
@@ -50,10 +50,10 @@ const RentModal = () => {
   } = useForm<FieldValues>({
     defaultValues: {
       category: '',
-      location: null,
-      guestCount: 1,
-      roomCount: 1,
-      bathroomCount: 1,
+      //location: null,
+      //guestCount: 1,
+      //roomCount: 1,
+      //bathroomCount: 1,
       imageSrc: '',
       price: 1,
       title: '',
@@ -61,16 +61,16 @@ const RentModal = () => {
     }
   });
 
-  const location = watch('location');
+  //const location = watch('location');
   const category = watch('category');
-  const guestCount = watch('guestCount');
-  const roomCount = watch('roomCount');
-  const bathroomCount = watch('bathroomCount');
+  //const guestCount = watch('guestCount');
+  //const roomCount = watch('roomCount');
+  //const bathroomCount = watch('bathroomCount');
   const imageSrc = watch('imageSrc');
 
-  const Map = useMemo(() => dynamic(() => import('../Map'), { 
+  /*const Map = useMemo(() => dynamic(() => import('../Map'), { 
     ssr: false 
-  }), [location]);
+  }), [location]);*/
 
 
   const setCustomValue = (id: string, value: any) => {
@@ -104,9 +104,9 @@ const RentModal = () => {
       setStep(STEPS.CATEGORY)
       rentModal.onClose();
     })
-    .catch(() => {
+    /*.catch(() => {
       toast.error('Something went wrong.');
-    })
+    })*/
     .finally(() => {
       setIsLoading(false);
     })
@@ -159,7 +159,7 @@ const RentModal = () => {
     </div>
   )
 
-  if (step === STEPS.LOCATION) {
+  /*if (step === STEPS.LOCATION) {
     bodyContent = (
       <div className="flex flex-col gap-8">
         <Heading
@@ -173,9 +173,9 @@ const RentModal = () => {
         <Map center={location?.latlng} />
       </div>
     );
-  }
+  }*/
 
-  if (step === STEPS.INFO) {
+  /*if (step === STEPS.INFO) {
     bodyContent = (
       <div className="flex flex-col gap-8">
         <Heading
@@ -204,7 +204,7 @@ const RentModal = () => {
         />
       </div>
     )
-  }
+  }*/
 
   if (step === STEPS.IMAGES) {
     bodyContent = (
@@ -254,7 +254,7 @@ const RentModal = () => {
       <div className="flex flex-col gap-8">
         <Heading
           title="Now, set your price"
-          subtitle="How much do you charge per night?"
+          subtitle="How much do you charge per day?"
         />
         <Input
           id="price"
