@@ -78,7 +78,7 @@ const ListingClient: React.FC<ListingClientProps> = ({
       .then(() => {
         toast.success('Contact the owner by email listed in My Reservations!');
         setDateRange(initialDateRange);
-        router.push('/trips');
+        router.push('/myreservations');
       })
       .catch(() => {
         toast.error('Something went wrong.');
@@ -104,7 +104,7 @@ const ListingClient: React.FC<ListingClientProps> = ({
       );
       
       if (dayCount && listing.price) {
-        setTotalPrice(dayCount * listing.price);
+        setTotalPrice((dayCount + 1)* listing.price);
       } else {
         setTotalPrice(listing.price);
       }
