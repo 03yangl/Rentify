@@ -9,7 +9,7 @@ import { SafeReservation, SafeUser } from "@/app/types";
 
 import Heading from "@/app/components/Heading";
 import Container from "@/app/components/Container";
-import ListingCard from "@/app/components/listings/ListingCard";
+import ListingEmailCard from "@/app/components/listings/ListingEmailCard";
 
 interface TripsClientProps {
   reservations: SafeReservation[],
@@ -43,7 +43,7 @@ const TripsClient: React.FC<TripsClientProps> = ({
     <Container>
       <Heading
         title="Items"
-        subtitle="Where you've been and where you're going"
+        subtitle="Items you reserved to rent in the future."
       />
       <div 
         className="
@@ -59,7 +59,7 @@ const TripsClient: React.FC<TripsClientProps> = ({
         "
       >
         {reservations.map((reservation: any) => (
-          <ListingCard
+          <ListingEmailCard
             key={reservation.id}
             data={reservation.listing}
             reservation={reservation}
@@ -68,6 +68,7 @@ const TripsClient: React.FC<TripsClientProps> = ({
             disabled={deletingId === reservation.id}
             actionLabel="Cancel reservation"
             currentUser={currentUser}
+            email={reservation.listing.ownerEmail}
           />
         ))}
       </div>

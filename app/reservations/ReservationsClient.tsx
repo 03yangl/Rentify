@@ -9,7 +9,7 @@ import { SafeReservation, SafeUser } from "@/app/types"
 ;
 import Heading from "@/app/components/Heading";
 import Container from "@/app/components/Container";
-import ListingCard from "@/app/components/listings/ListingCard";
+import ListingEmailCard from "@/app/components/listings/ListingEmailCard";
 
 interface ReservationsClientProps {
   reservations: SafeReservation[],
@@ -59,7 +59,7 @@ const ReservationsClient: React.FC<ReservationsClientProps> = ({
         "
       >
         {reservations.map((reservation: any) => (
-          <ListingCard
+          <ListingEmailCard
             key={reservation.id}
             data={reservation.listing}
             reservation={reservation}
@@ -68,6 +68,7 @@ const ReservationsClient: React.FC<ReservationsClientProps> = ({
             disabled={deletingId === reservation.id}
             actionLabel="Cancel renter reservation"
             currentUser={currentUser}
+            email={reservation.renterEmail}
           />
         ))}
       </div>

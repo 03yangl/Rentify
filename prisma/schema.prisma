@@ -58,6 +58,7 @@ model Listing {
   //locationValue String
   userId String @db.ObjectId
   price Int
+  ownerEmail String
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
   reservations Reservation[]
@@ -71,6 +72,7 @@ model Reservation {
   endDate DateTime
   totalPrice Int
   createdAt DateTime @default(now())
+  renterEmail String
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
   listing Listing @relation(fields: [listingId], references: [id], onDelete: Cascade)

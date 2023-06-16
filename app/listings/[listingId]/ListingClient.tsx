@@ -72,10 +72,11 @@ const ListingClient: React.FC<ListingClientProps> = ({
         totalPrice,
         startDate: dateRange.startDate,
         endDate: dateRange.endDate,
-        listingId: listing?.id
+        listingId: listing?.id,
+        renterEmail: currentUser.email
       })
       .then(() => {
-        toast.success('Listing reserved!');
+        toast.success('Contact the owner by email listed in My Reservations!');
         setDateRange(initialDateRange);
         router.push('/trips');
       })
@@ -139,9 +140,6 @@ const ListingClient: React.FC<ListingClientProps> = ({
               user={listing.user}
               category={category}
               description={listing.description}
-              // roomCount={listing.roomCount}
-              // guestCount={listing.guestCount}
-              // bathroomCount={listing.bathroomCount}
               // locationValue={listing.locationValue}
             />
             <div 
