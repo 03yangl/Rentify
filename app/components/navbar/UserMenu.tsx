@@ -104,7 +104,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
               <>
                 <MenuItem 
                   label="My Reservations" 
-                  onClick={() => router.push('/trips')}
+                  onClick={() => router.push('/myreservations')}
                 />
                 <MenuItem 
                   label="My Favorites" 
@@ -116,7 +116,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
                 />
                 <MenuItem 
                   label="My Items" 
-                  onClick={() => router.push('/properties')}
+                  onClick={() => router.push('/items')}
                 />
                 <MenuItem 
                   label="Rent out my items!" 
