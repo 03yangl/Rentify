@@ -18,9 +18,9 @@ export const authOptions: AuthOptions = {
     }),
     GoogleProvider({
       //clientId: process.env.GOOGLE_CLIENT_ID as string,
-      clientId: "989326851248-k18al66onutost03airs5bhrpnu5e443.apps.googleusercontent.com",
+      clientId: "989326851248-t31enikpnh6c856t5bcu5jin9tm2h0l8.apps.googleusercontent.com",
       //clientSecret: process.env.GOOGLE_CLIENT_SECRET as string
-      clientSecret: "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"
+      clientSecret: "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"
     }),
     CredentialsProvider({
       name: 'credentials',
