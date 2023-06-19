@@ -33,7 +33,7 @@ export const categories = [
     description: 'Education for a fraction of the cost!',
   },
   {
-    label: 'Cameras / Video',
+    label: 'Cameras / Video equipment',
     icon: BsCameraFill,
     description: 'Rolling...'
   },
