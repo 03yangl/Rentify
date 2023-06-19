@@ -7,8 +7,8 @@ generator client {
 
 datasource db {
   provider = "mongodb"
-  //url      = env("DATABASE_URL")
-  url = "mongodb+srv://rentify:rentify@rentify.ux91byo.mongodb.net/rentify"
+  url      = env("DATABASE_URL")
+  //url = "mongodb+srv://rentify:rentify@rentify.ux91byo.mongodb.net/rentify"
 }
 
 model User {
