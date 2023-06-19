@@ -1,21 +1,11 @@
 'use client';
 
 import { usePathname, useSearchParams } from 'next/navigation';
-import { TbBeach, TbMountain, TbPool } from 'react-icons/tb';
-import { 
-  GiBarn, 
-  GiBoatFishing, 
-  GiCactus, 
-  GiCastle, 
-  GiCaveEntrance, 
-  GiForestCamp, 
-  GiIsland,
-  GiWindmill
-} from 'react-icons/gi';
-import { FaSkiing } from 'react-icons/fa';
-import { BsSnow } from 'react-icons/bs';
-import { IoDiamond } from 'react-icons/io5';
-import { MdOutlineVilla } from 'react-icons/md';
+import { BsSunglasses, BsScooter, BsCameraFill, BsCalendar4Event, BsBox2 } from 'react-icons/bs';
+import { ImBooks } from 'react-icons/im'; 
+import { FaCouch, FaGamepad, FaShapes} from 'react-icons/fa';
+import { RiFridgeLine } from 'react-icons/ri';
+
 
 import CategoryBox from "../CategoryBox";
 import Container from '../Container';
@@ -24,52 +14,52 @@ import Container from '../Container';
 export const categories = [
   {
     label: 'Appliances',
-    icon: GiIsland,
+    icon: RiFridgeLine,
     description: 'Tools you only need once!'
   },
   {
     label: 'Attire',
-    icon: GiIsland,
+    icon: BsSunglasses,
     description: 'Clothing for cheap!'
   },
   {
-    label: 'Bikes and Scooters',
-    icon: TbBeach,
+    label: 'Bikes / Scooters',
+    icon: BsScooter,
     description: 'Helping you get places!',
   },
   {
-    label: 'Books and Textbooks',
-    icon: GiWindmill,
+    label: 'Books',
+    icon: ImBooks,
     description: 'Education for a fraction of the cost!',
   },
   {
-    label: 'Cameras / Video equipment',
-    icon: MdOutlineVilla,
+    label: 'Cameras / Video',
+    icon: BsCameraFill,
     description: 'Rolling...'
   },
   {
     label: 'Furniture',
-    icon: TbMountain,
+    icon: FaCouch,
     description: 'Enhance your room!'
   },
   {
     label: 'Gaming',
-    icon: TbPool,
+    icon: FaGamepad,
     description: 'Controllers for your next hangout.'
   },  
   {
     label: 'Event Space',
-    icon: TbPool,
+    icon: BsCalendar4Event,
     description: 'To hold ALL your guests!'
   },
   {
     label: 'Storage Space',
-    icon: GiIsland,
+    icon: BsBox2,
     description: 'Last minute drop-offs.'
   },
   {
     label: 'Other',
-    icon: GiIsland,
+    icon: FaShapes,
     description: '...'
   }
 ]
