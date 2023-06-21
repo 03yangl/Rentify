@@ -42,8 +42,8 @@ const ReservationsClient: React.FC<ReservationsClientProps> = ({
   return (
     <Container>
       <Heading
-        title="Reservations"
-        subtitle="Bookings on your listings"
+        title="Contact info for all bookings."
+        subtitle="Contact the renter of the item to rent through the email listed below."
       />
       <div 
         className="

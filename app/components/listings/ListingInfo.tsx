@@ -8,6 +8,8 @@ import { SafeUser } from "@/app/types";
 
 import Avatar from "../Avatar";
 import ListingCategory from "./ListingCategory";
+import Link from 'next/link'
+
 
 const Map = dynamic(() => import('../Map'), { 
   ssr: false 
@@ -71,6 +73,11 @@ const ListingInfo: React.FC<ListingInfoProps> = ({
         {description}
       </div>
       <hr />
+      <div>
+        <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdEEgiHazYMvVIejC_hanO5QRaUncab7n2dg_ehXMSxoqt1EQ/viewform?usp=sf_link" style={{color: 'red'}}>
+          Report
+        </Link>
+      </div>
     </div>
    );
 }

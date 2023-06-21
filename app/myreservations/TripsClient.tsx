@@ -42,8 +42,8 @@ const TripsClient: React.FC<TripsClientProps> = ({
   return (
     <Container>
       <Heading
-        title="Items"
-        subtitle="Items you reserved to rent in the future."
+        title="Contact info for items you rent."
+        subtitle="Contact the owner of the item to rent through the email listed below."
       />
       <div 
         className="

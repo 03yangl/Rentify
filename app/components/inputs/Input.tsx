@@ -11,6 +11,8 @@ interface InputProps {
   id: string;
   label: string;
   type?: string;
+  min?: string;
+  step?: string;
   disabled?: boolean;
   formatPrice?: boolean;
   required?: boolean;
@@ -24,9 +26,12 @@ const Input: React.FC<InputProps> = ({
   type = "text", 
   disabled, 
   formatPrice,
+  min,
+  step,
   register,
   required,
   errors,
+  
 }) => {
   return (
     <div className="w-full relative">
@@ -47,6 +52,8 @@ const Input: React.FC<InputProps> = ({
         {...register(id, { required })}
         placeholder=" "
         type={type}
+        min={min}
+        step={step}
         className={`
           peer
           w-full

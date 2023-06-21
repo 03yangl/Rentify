@@ -15,6 +15,7 @@ import { categories } from "@/app/components/navbar/Categories";
 import ListingHead from "@/app/components/listings/ListingHead";
 import ListingInfo from "@/app/components/listings/ListingInfo";
 import ListingReservation from "@/app/components/listings/ListingReservation";
+import isToday from "date-fns/isToday/index";
 
 const initialDateRange = {
   startDate: new Date(),
@@ -66,6 +67,22 @@ const ListingClient: React.FC<ListingClientProps> = ({
       if (!currentUser) {
         return loginModal.onOpen();
       }
+      setIsLoading(true);
+
+      const today = new Date();
+      today.setHours(0,0,0,0);
+      const match = disabledDates.find(d => d.getTime() === today.getTime());
+      const hasMatch = !!match; // convert to boolean
+      const initalDate = dateRange.startDate;
+      initalDate!.setHours(0,0,0,0);
+
+      if (hasMatch && (initalDate!.getTime() == today.getTime())) {
+        toast.error('Something went wrong.');
+        router.refresh();
+        setIsLoading(false);
+        return;
+      }
+
       setIsLoading(true);
 
       axios.post('/api/reservations', {

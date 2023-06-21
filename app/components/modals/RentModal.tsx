@@ -210,8 +210,8 @@ const RentModal = () => {
     bodyContent = (
       <div className="flex flex-col gap-8">
         <Heading
-          title="Add a photo of your place"
-          subtitle="Show renters what item place looks like!"
+          title="Add a photo of your item"
+          subtitle="Show renters what item item looks like!"
         />
         <ImageUpload
           onChange={(value) => setCustomValue('imageSrc', value)}
@@ -264,6 +264,8 @@ const RentModal = () => {
           disabled={isLoading}
           register={register}
           errors={errors}
+          min="0"
+          step="0.01"
           required
         />
       </div>

@@ -15,6 +15,7 @@ interface DatePickerProps {
   disabledDates?: Date[];
 }
 
+
 const DatePicker: React.FC<DatePickerProps> = ({
   value,
   onChange,
@@ -27,7 +28,7 @@ const DatePicker: React.FC<DatePickerProps> = ({
       date={new Date()}
       onChange={onChange}
       direction="vertical"
-      showDateDisplay={false}
+      showDateDisplay={true}
       minDate={new Date()}
       disabledDates={disabledDates}
     />
