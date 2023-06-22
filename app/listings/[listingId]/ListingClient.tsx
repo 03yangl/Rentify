@@ -69,6 +69,13 @@ const ListingClient: React.FC<ListingClientProps> = ({
       }
       setIsLoading(true);
 
+      if (currentUser.id == listing.user.id) {
+        toast.error('You cannot reserve your own listing.');
+        router.refresh();
+        setIsLoading(false);
+        return;
+      }
+
       const today = new Date();
       today.setHours(0,0,0,0);
       const match = disabledDates.find(d => d.getTime() === today.getTime());
